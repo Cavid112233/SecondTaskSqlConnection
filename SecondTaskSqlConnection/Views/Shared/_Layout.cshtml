@@ -67,21 +67,21 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav mx-auto py-0">
-                <a asp-controller="home" asp-action="index" class="nav-item nav-link active">Home</a>
+                <a asp-controller="home" asp-action="index" class="nav-item nav-link">Home</a>
                 <a asp-controller="about" asp-action="index" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link">Service</a>
+                <a asp-controller="service" asp-action="index" class="nav-item nav-link">Service</a>
                 <a asp-controller="product" asp-action="index" class="nav-item nav-link">Product</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu m-0">
-                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                        <a href="detail.html" class="dropdown-item">Blog Detail</a>
-                        <a href="feature.html" class="dropdown-item">Features</a>
-                        <a href="team.html" class="dropdown-item">The Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a asp-controller="pages" asp-action="index" class="dropdown-item">Blog Grid</a>
+                        <a asp-controller="pages" asp-action="blogdetail" class="dropdown-item">Blog Detail</a>
+                        <a asp-controller="pages" asp-action="features" class="dropdown-item">Features</a>
+                        <a asp-controller="pages" asp-action="team" class="dropdown-item">The Team</a>
+                        <a asp-controller="pages" asp-action="testomonial" class="dropdown-item">Testimonial</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a asp-controller="contact" asp-action="index" class="nav-item nav-link">Contact</a>
             </div>
         </div>
     </nav>

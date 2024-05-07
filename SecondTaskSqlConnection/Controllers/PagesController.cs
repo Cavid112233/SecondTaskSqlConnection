@@ -15,6 +15,22 @@ namespace SecondTaskSqlConnection.Controllers
         {
             return View();
         }
+        public IActionResult BlogDetail()
+        {
+            return View();
+        }
+        public IActionResult Features()
+        {
+            return View();
+        }
+        public IActionResult Team()
+        {
 
+            return View();
+        }
+        public IActionResult Testomonial()
+        {
+            return View();
+        }
     }
 }

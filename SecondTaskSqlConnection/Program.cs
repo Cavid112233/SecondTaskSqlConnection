@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using SecondTaskSqlConnection.DAL;
+using SecondTaskSqlConnection.ViewModels;
 
 namespace SecondTaskSqlConnection
 {
@@ -8,7 +10,6 @@ namespace SecondTaskSqlConnection
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            var app = builder.Build();
             var config = builder.Configuration;
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<AppDbContext>(options =>
@@ -16,12 +17,9 @@ namespace SecondTaskSqlConnection
                 options.UseSqlServer(config.GetConnectionString("DefaultConnection"));
             });
 
+            var app = builder.Build();
             app.UseStaticFiles();
-            app.MapControllerRoute(
-                "default",
-                "{controller=home}/{action=index}/{id?}"
-
-                );
+            app.MapControllerRoute( "default","{controller=home}/{action=index}/{id?}" );
             app.Run();
         }
     }

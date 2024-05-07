@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SecondTaskSqlConnection.Models;
 
 namespace SecondTaskSqlConnection.DAL
 {
@@ -7,6 +8,6 @@ namespace SecondTaskSqlConnection.DAL
         public AppDbContext(DbContextOptions options) : base(options)
         {
         }
-
+        public DbSet<OrganicVegetable> OrganicVegetables { get; set; }
     }
 }

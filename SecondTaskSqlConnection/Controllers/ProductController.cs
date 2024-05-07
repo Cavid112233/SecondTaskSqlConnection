@@ -16,7 +16,8 @@ namespace SecondTaskSqlConnection.Controllers
         {
             ProductVM vm = new()
             {
-                OrganicVegetables = _appDbContext.OrganicVegetables.ToList()
+                OrganicVegetables = _appDbContext.OrganicVegetables.ToList(),
+                ChooseUses = _appDbContext.ChooseUses.ToList(),
             };
             return View(vm);
         }

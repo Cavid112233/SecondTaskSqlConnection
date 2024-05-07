@@ -3,11 +3,11 @@ using SecondTaskSqlConnection.DAL;
 
 namespace SecondTaskSqlConnection.Controllers
 {
-    public class PagesController : Controller
+    public class ContactController : Controller
     {
         private readonly AppDbContext _appDbContext;
 
-        public PagesController(AppDbContext appDbContext)
+        public ContactController(AppDbContext appDbContext)
         {
             _appDbContext = appDbContext;
         }
@@ -15,6 +15,5 @@ namespace SecondTaskSqlConnection.Controllers
         {
             return View();
         }
-
     }
 }

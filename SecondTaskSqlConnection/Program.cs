@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using SecondTaskSqlConnection.DAL;
 
 namespace SecondTaskSqlConnection
@@ -8,6 +9,7 @@ namespace SecondTaskSqlConnection
         {
             var builder = WebApplication.CreateBuilder(args);
             var app = builder.Build();
+            var config = builder.Configuration;
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<AppDbContext>(options =>
             {

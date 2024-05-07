@@ -1,7 +1,12 @@
-﻿namespace SecondTaskSqlConnection.DAL
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace SecondTaskSqlConnection.DAL
 {
-    public class AppDbContext
+    public class AppDbContext : DbContext
     {
-        
+        public AppDbContext(DbContextOptions options) : base(options)
+        {
+        }
+
     }
 }

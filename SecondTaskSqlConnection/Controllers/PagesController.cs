@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SecondTaskSqlConnection.DAL;
+using SecondTaskSqlConnection.Models;
+using SecondTaskSqlConnection.ViewModels;
 
 namespace SecondTaskSqlConnection.Controllers
 {
@@ -25,8 +27,11 @@ namespace SecondTaskSqlConnection.Controllers
         }
         public IActionResult Team()
         {
-
-            return View();
+            PagesVM vm = new()
+            {
+                Farmers = _appDbContext.Farmers.ToList()
+            };
+            return View(vm);
         }
         public IActionResult Testomonial()
         {

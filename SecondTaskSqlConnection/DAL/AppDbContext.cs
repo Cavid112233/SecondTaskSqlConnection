@@ -10,5 +10,6 @@ namespace SecondTaskSqlConnection.DAL
         }
         public DbSet<OrganicVegetable> OrganicVegetables { get; set; }
         public DbSet<ChooseUs> ChooseUses { get; set; }
+        public DbSet<Farmer> Farmers { get; set; }
     }
 }

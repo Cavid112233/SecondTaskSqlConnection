@@ -1,4 +1,5 @@
-﻿<!-- Hero Start -->
+﻿@model PagesVM
+<!-- Hero Start -->
 <div class="container-fluid bg-primary py-5 bg-hero mb-5">
     <div class="container py-5">
         <div class="row justify-content-start">
@@ -18,17 +19,17 @@
             <h6 class="text-primary text-uppercase">The Team</h6>
             <h1 class="display-5">We Are Professional Organic Farmers</h1>
         </div>
-        @foreach (var item in Model)
+        @foreach (var item in Model.Farmers)
         {
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6">
                     <div class="row g-0">
                         <div class="col-10">
                             <div class="position-relative">
-                                <img class="img-fluid w-100" src="~/img/team-1.jpg" alt="">
+                                <img class="img-fluid w-100" src="~/img/@item.Image" alt="">
                                 <div class="position-absolute start-0 bottom-0 w-100 py-3 px-4" style="background: rgba(52, 173, 84, .85);">
-                                    <h4 class="text-white">Farmer Name</h4>
-                                    <span class="text-white">Designation</span>
+                                    <h4 class="text-white">@item.Name</h4>
+                                    <span class="text-white">@item.Expierence</span>
                                 </div>
                             </div>
                         </div>
